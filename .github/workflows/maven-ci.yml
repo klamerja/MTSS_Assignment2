@@ -35,6 +35,7 @@ jobs:
       run: |
         if [[ `git status --porcelain` ]]; then
           git config --global user.name '${{github.event.pusher.name}}'
+          git config --global user.email '${{github.event.pusher.email}}'
           git add -A
           git commit -m "Jacoco coverage badge"
           git push
