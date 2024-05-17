@@ -1,0 +1,41 @@
+name: Maven CI
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: 21.0.3+9.0.LTS
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Deployment with Maven
+      run: mvn -B clean package --file pom.xml
+      
+    - name: Generate JaCoCo Badges
+      uses: cicirello/jacoco-badge-generator@v2.11.0
+      with:
+        jacoco-csv-file: target/site/jacoco/jacoco.csv
+        coverage-badge-filename: coverage.svg
+        generate-branches-badge: true
+        branches-badge-filename: branches.svg
+        generate-summary: true
+    
+    - name: Commit of the badges (if changed)
+      run: |
+        if [[ `git status --porcelain` ]]; then
+          git config --global user.name '${{github.event.pusher.name}}'
+          git add -A
+          git commit -m "Jacoco coverage badge"
+          git push
+        fi
