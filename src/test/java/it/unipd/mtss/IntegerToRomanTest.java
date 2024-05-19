@@ -37,139 +37,78 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConversioneNum1(){
-        try {
-            assertEquals("I", IntegerToRoman.convert(1));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum1() throws Exception {
+        assertEquals("I", IntegerToRoman.convert(1));            
     }
 
     @Test
-    public void testConversioneNum3(){
-        try {
-            assertEquals("III", IntegerToRoman.convert(3));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum3() throws Exception {
+        assertEquals("III", IntegerToRoman.convert(3));            
     }
 
     @Test
-    public void testConversioneNum9(){
-        try {
-            assertEquals("IX", IntegerToRoman.convert(9));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum9() throws Exception {
+        assertEquals("IX", IntegerToRoman.convert(9));            
     }
 
     @Test
-    public void testConversioneNum14(){
-        try {
-            assertEquals("XIV", IntegerToRoman.convert(14));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum14() throws Exception {
+        assertEquals("XIV", IntegerToRoman.convert(14));            
     }
 
     @Test
-    public void testConversioneNum21(){
-        try {
-            assertEquals("XXI", IntegerToRoman.convert(21));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum21() throws Exception {
+        assertEquals("XXI", IntegerToRoman.convert(21));            
     }
 
     @Test
-    public void testConversioneNum46(){
-        try {
-            assertEquals("XLVI", IntegerToRoman.convert(46));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum46() throws Exception {
+        assertEquals("XLVI", IntegerToRoman.convert(46));            
     }
 
     @Test
-    public void testConversioneNum57(){
-        try {
-            assertEquals("LVII", IntegerToRoman.convert(57));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum57() throws Exception {
+        assertEquals("LVII", IntegerToRoman.convert(57));            
     }
 
     @Test
-    public void testConversioneNum78(){
-        try {
-            assertEquals("LXXVIII", IntegerToRoman.convert(78));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum78() throws Exception {
+        assertEquals("LXXVIII", IntegerToRoman.convert(78));            
     }
 
     @Test
-    public void testConversioneNum105(){
-        try {
-            assertEquals("CV", IntegerToRoman.convert(105));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    @Test
-    public void testConversioneNum282(){
-        try {
-            assertEquals("CCLXXXII", IntegerToRoman.convert(282));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum105() throws Exception {
+        assertEquals("CV", IntegerToRoman.convert(105));            
     }
 
     @Test
-    public void testConversioneNum449(){
-        try {
-            assertEquals("CDXLIX", IntegerToRoman.convert(449));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum282() throws Exception {
+        assertEquals("CCLXXXII", IntegerToRoman.convert(282));            
     }
 
     @Test
-    public void testConversioneNum581(){
-        try {
-            assertEquals("DLXXXI", IntegerToRoman.convert(581));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum449() throws Exception {
+        assertEquals("CDXLIX", IntegerToRoman.convert(449));            
     }
 
     @Test
-    public void testConversioneNum777(){
-        try {
-            assertEquals("DCCLXXVII", IntegerToRoman.convert(777));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum581() throws Exception {
+        assertEquals("DLXXXI", IntegerToRoman.convert(581));            
     }
 
     @Test
-    public void testConversioneNum998(){
-        try {
-            assertEquals("CMXCVIII", IntegerToRoman.convert(998));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum777() throws Exception {
+        assertEquals("DCCLXXVII", IntegerToRoman.convert(777));            
     }
 
     @Test
-    public void testConversioneNum1000(){
-        try {
-            assertEquals("M", IntegerToRoman.convert(1000));            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void testConversioneNum998() throws Exception {
+        assertEquals("CMXCVIII", IntegerToRoman.convert(998));            
+    }
+
+    @Test
+    public void testConversioneNum1000() throws Exception {
+        assertEquals("M", IntegerToRoman.convert(1000));            
     }
 
 }
